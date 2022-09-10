@@ -37,9 +37,7 @@ public class CardDefinition
     public Sprite SpriteNormal;
     public Sprite SpriteLeft;
     public Sprite SpriteRight;
-    public String TextNormal;
-    public String TextLeft;
-    public String TextRight;
+    public string id;
     public CardResult LeftResult;
 
     public CardResult RightResult;
