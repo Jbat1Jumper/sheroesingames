@@ -15,6 +15,17 @@ public class Card : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = Definition.SpriteNormal;
     }
+    public bool isMouseOver = false;
+    
+    private void OnMouseOver()
+    {
+        isMouseOver = true;
+
+    }
+    private void OnMouseExit()
+    {
+        isMouseOver = false;
+    }
 }
 
 [System.Serializable]
