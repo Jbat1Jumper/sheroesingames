@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,9 @@ public class CardResult {
 public class Card : MonoBehaviour
 {
     public CardDefinition Definition;
-
     public void Start()
     {
+   
         GetComponent<SpriteRenderer>().sprite = Definition.SpriteNormal;
     }
     public bool isMouseOver = false;
@@ -36,7 +37,9 @@ public class CardDefinition
     public Sprite SpriteNormal;
     public Sprite SpriteLeft;
     public Sprite SpriteRight;
-
+    public String TextNormal;
+    public String TextLeft;
+    public String TextRight;
     public CardResult LeftResult;
 
     public CardResult RightResult;
