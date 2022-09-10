@@ -104,10 +104,15 @@ MonoBehaviour:
     SpriteNormal: {fileID: 21300000, guid: 99d754bedb291804e935db0d54cac740, type: 3}
     SpriteLeft: {fileID: 21300000, guid: 1278739d16c688443bd9865a77e37d0b, type: 3}
     SpriteRight: {fileID: 21300000, guid: 857bdb8258475d34e967b5da0605f1c2, type: 3}
+    id: 
     LeftResult:
-      Stat1Change: 1
+      EnergyChange: 0
+      MoodChange: 0
+      PowerChange: 0
     RightResult:
-      Stat1Change: -1
+      EnergyChange: 0
+      MoodChange: 0
+      PowerChange: 0
   isMouseOver: 0
 --- !u!61 &523394573
 BoxCollider2D:
@@ -150,6 +155,7 @@ MonoBehaviour:
   card: {fileID: 2583536415756231157}
   fMovingSpeed: 1
   onScreen: 0
+  textObject: {fileID: 0}
 --- !u!1 &5865137989215229555
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +291,7 @@ MonoBehaviour:
   m_fontSizeMin: 3.6
   m_fontSizeMax: 14
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -314,7 +320,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -3.1343389, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

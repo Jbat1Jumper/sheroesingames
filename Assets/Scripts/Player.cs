@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     public UnityEvent<int> OnEnergyChanged;
     public UnityEvent<int> OnMoodChanged;
+    public UnityEvent<int> OnPowerChanged;
 
     public void Start()
     {
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
 
         if (result.PowerChange != 0) {
             Power += result.PowerChange;
-            OnMoodChanged.Invoke(Power);
+            OnPowerChanged.Invoke(Power);
         }
 
         // Maybe yield until animation
