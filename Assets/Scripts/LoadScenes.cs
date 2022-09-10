@@ -9,7 +9,7 @@ public class LoadScenes : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("LoadScreen");
     }
 
     public void ExitGame()
