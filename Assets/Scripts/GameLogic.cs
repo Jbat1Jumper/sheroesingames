@@ -1,21 +1,27 @@
+using System;
+using TMPro;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameLogic : MonoBehaviour
 {
     public GameObject card;
-    SpriteRenderer sr;
     Card cl;
     public float fMovingSpeed = 1f;
     private Player player;
     public bool onScreen = false;
+    [SerializeField] TextMeshPro textObject;
+    [SerializeField]  string prueba;
 
     // Start is called before the first frame update
     void Start()
     {
-        sr = card.GetComponent<SpriteRenderer>();
+      
         cl = card.GetComponent<Card>();
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        textObject = GetComponentInChildren<TextMeshPro>();
     }
 
     // Update is called once per frame
@@ -48,15 +54,15 @@ public class GameLogic : MonoBehaviour
 
         if (card.transform.position.x > 1)
         {
-            sr.sprite = card.GetComponent<Card>().Definition.SpriteRight;
+            textObject.text = prueba;
         }
         else if (card.transform.position.x < -1)
         {
-            sr.sprite = card.GetComponent<Card>().Definition.SpriteLeft;
+          
         }
         else
         {
-            sr.sprite = card.GetComponent<Card>().Definition.SpriteNormal;
+         
         }
     }
 }

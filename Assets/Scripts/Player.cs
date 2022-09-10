@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -66,5 +68,6 @@ public class Player : MonoBehaviour
     {
         Debug.Log("No more cards");
         Debug.Log("GAME OVER");
+        SceneManager.LoadScene("MenuScene");
     }
 }
