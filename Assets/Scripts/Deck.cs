@@ -19,6 +19,8 @@ public class Deck : MonoBehaviour
     public void Start()
     {
         var cards = GetComponentsInChildren<Card>();
+
+        Debug.Log(string.Format("Initialized {0} Cards", cards.Length));
         // TODO: Actually shuffle cards
         Cards = new Stack<Card>(cards);
     }

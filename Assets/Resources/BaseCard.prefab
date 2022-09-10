@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2583536415756231155}
   - component: {fileID: 2583536415756231156}
   - component: {fileID: 2583536415756231154}
+  - component: {fileID: 523394573}
+  - component: {fileID: 523394574}
   m_Layer: 0
   m_Name: BaseCard
   m_TagString: Untagged
@@ -98,7 +100,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Definition:
+    SpriteNormal: {fileID: 21300000, guid: 99d754bedb291804e935db0d54cac740, type: 3}
+    SpriteLeft: {fileID: 21300000, guid: 1278739d16c688443bd9865a77e37d0b, type: 3}
+    SpriteRight: {fileID: 21300000, guid: 857bdb8258475d34e967b5da0605f1c2, type: 3}
     LeftResult:
       Stat1Change: 1
     RightResult:
       Stat1Change: -1
+  isMouseOver: 0
+--- !u!61 &523394573
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583536415756231157}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4, y: 1.9}
+    newSize: {x: 1.4, y: 1.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 1.9}
+  m_EdgeRadius: 0
+--- !u!114 &523394574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583536415756231157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e2bc81214b1bd4ca1d1d40d4fc3991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 2583536415756231157}
+  fMovingSpeed: 1
+  enabled: 0

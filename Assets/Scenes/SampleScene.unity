@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
   m_PrefabInstance: {fileID: 2583536415819178847}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523394572}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7817b787f9d174ebe483f38cbb3e71, type: 3}
@@ -432,52 +432,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &523394572 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2583536415756231157, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
-  m_PrefabInstance: {fileID: 2583536415819178847}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &523394573
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523394572}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.9}
-    newSize: {x: 1.4, y: 1.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4, y: 1.9}
-  m_EdgeRadius: 0
---- !u!114 &523394574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523394572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e2bc81214b1bd4ca1d1d40d4fc3991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 523394572}
-  cl: {fileID: 0}
-  fMovingSpeed: 1
 --- !u!1 &542253139
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +940,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1523907169083490367, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1523907170002085452, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
       propertyPath: m_Name
       value: Deck
@@ -1034,6 +992,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1523907170387888492, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523907170456930206, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962202101189803972, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962202102569760407, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962202102630742117, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
 --- !u!1001 &2583536415819178847
@@ -1043,18 +1021,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
-      propertyPath: Definition.SpriteLeft
-      value: 
-      objectReference: {fileID: 21300000, guid: 1278739d16c688443bd9865a77e37d0b, type: 3}
-    - target: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
-      propertyPath: Definition.SpriteRight
-      value: 
-      objectReference: {fileID: 21300000, guid: 857bdb8258475d34e967b5da0605f1c2, type: 3}
-    - target: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
-      propertyPath: Definition.SpriteNormal
-      value: 
-      objectReference: {fileID: 21300000, guid: 99d754bedb291804e935db0d54cac740, type: 3}
+    - target: {fileID: 523394574, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
+      propertyPath: onScreen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2583536415756231155, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
       propertyPath: m_RootOrder
       value: 1

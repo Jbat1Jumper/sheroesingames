@@ -59,6 +59,7 @@ public class Player : MonoBehaviour
     public void PlaceCardInCenter(Card card)
     {
         card.transform.position = Vector3.zero;
+        card.GetComponent<GameLogic>().onScreen = true;
     }
 
     public void NoMoreCards()

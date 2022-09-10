@@ -5,9 +5,10 @@ public class GameLogic : MonoBehaviour
 {
     public GameObject card;
     SpriteRenderer sr;
-    public Card cl;
+    Card cl;
     public float fMovingSpeed = 1f;
     private Player player;
+    public bool onScreen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class GameLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!onScreen) return;
+
         if (Input.GetMouseButton(0) && cl.isMouseOver)
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
