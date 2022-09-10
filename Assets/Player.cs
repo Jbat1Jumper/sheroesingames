@@ -49,19 +49,16 @@ public class Player : MonoBehaviour
 
         var card = Deck.GetNextCard();
         if (card != null) {
-            CreateCardFromDefinition(card);
+            PlaceCardInCenter(card);
+            CurrentCard = card;
         } else {
             NoMoreCards();
         }
     }
 
-    public void CreateCardFromDefinition(CardDefinition definition)
+    public void PlaceCardInCenter(Card card)
     {
-        var gameObject = Instantiate(Resources.Load("BaseCard")) as GameObject;
-        var card = gameObject.GetComponent<Card>();
-        card.Definition = definition;
-
-        CurrentCard = card;
+        card.transform.position = Vector3.zero;
     }
 
     public void NoMoreCards()

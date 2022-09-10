@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    Stack<CardDefinition> Cards = new Stack<CardDefinition>();
+    Stack<Card> Cards = new Stack<Card>();
 
-    public CardDefinition GetNextCard()
+    public Card GetNextCard()
     {
         if (Cards.Count > 0) {
             Debug.Log("Poppin Card");
@@ -18,40 +18,8 @@ public class Deck : MonoBehaviour
 
     public void Start()
     {
-        ShuffleDeck();
-    }
-
-    public void ShuffleDeck()
-    {
+        var cards = GetComponentsInChildren<Card>();
         // TODO: Actually shuffle cards
-        Cards = new Stack<CardDefinition>(InitialCards);
+        Cards = new Stack<Card>(cards);
     }
-
-    List<CardDefinition> InitialCards = new List<CardDefinition>() {
-        new CardDefinition() {
-            LeftResult = new CardResult() {
-                Stat1Change = 1,
-            },
-            RightResult = new CardResult() {
-                Stat1Change = -1,
-            },
-        },
-        new CardDefinition() {
-            LeftResult = new CardResult() {
-                Stat1Change = 2,
-            },
-            RightResult = new CardResult() {
-                Stat1Change = -2,
-            },
-        },
-        new CardDefinition() {
-            LeftResult = new CardResult() {
-                Stat1Change = 3,
-            },
-            RightResult = new CardResult() {
-                Stat1Change = -3,
-            },
-        },
-    };
-
 }
