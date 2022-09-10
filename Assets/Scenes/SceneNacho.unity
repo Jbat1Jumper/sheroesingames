@@ -223,10 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7817b787f9d174ebe483f38cbb3e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftResult:
-    Stat1Change: 1
-  RightResult:
-    Stat1Change: -1
+  Definition:
+    LeftResult:
+      Stat1Change: 0
+    RightResult:
+      Stat1Change: 0
 --- !u!114 &207585966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 207585962}
   cl: {fileID: 0}
+  fMovingSpeed: 1
 --- !u!114 &207585967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stat1: 5
   CurrentCard: {fileID: 207585965}
+  Deck: {fileID: 0}
   OnStat1Changed:
     m_PersistentCalls:
       m_Calls:
