@@ -17,4 +17,9 @@ public class LoadScenes : MonoBehaviour
         Application.Quit();
         Debug.Log("Exit Game");
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
