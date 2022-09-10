@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int Stat1 = 5;
+    public int Energy = 5;
+    public int Mood = 5;
 
     public Card CurrentCard;
     public Deck Deck;
 
-    public UnityEvent<int> OnStat1Changed;
+    public UnityEvent<int> OnEnergyChanged;
+    public UnityEvent<int> OnMoodChanged;
 
     public void Start()
     {
@@ -33,9 +35,15 @@ public class Player : MonoBehaviour
 
     public void ApplyResult(CardResult result)
     {
-        if (result.Stat1Change != 0) {
-            Stat1 += result.Stat1Change;
-            OnStat1Changed.Invoke(Stat1);
+        if (result.EnergyChange != 0) {
+            Energy += result.EnergyChange;
+            OnEnergyChanged.Invoke(Energy);
+            Debug.Log("Triggering Stat1 Change");
+        }
+
+        if (result.MoodChange != 0) {
+            Mood += result.MoodChange;
+            OnMoodChanged.Invoke(Mood);
             Debug.Log("Triggering Stat1 Change");
         }
 
