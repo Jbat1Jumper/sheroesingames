@@ -13,8 +13,8 @@ public class GameLogic : MonoBehaviour
     private Player player;
     public bool onScreen = false;
     [SerializeField] TextMeshPro textObject;
-    [SerializeField]  string prueba;
-
+   
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,15 +54,18 @@ public class GameLogic : MonoBehaviour
 
         if (card.transform.position.x > 1)
         {
-            textObject.text = prueba;
+            textObject.fontSize = 32;
+            textObject.text = Translations.Get(cl.Definition.id+"A");
         }
         else if (card.transform.position.x < -1)
         {
-          
+            textObject.fontSize = 32;
+            textObject.text = Translations.Get(cl.Definition.id+"B");
         }
         else
         {
-         
+            textObject.fontSize = 14;
+            textObject.text = Translations.Get(cl.Definition.id);
         }
     }
 }
