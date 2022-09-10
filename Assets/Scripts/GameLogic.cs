@@ -54,12 +54,12 @@ public class GameLogic : MonoBehaviour
 
         if (card.transform.position.x > 1)
         {
-            textObject.fontSize = 32;
+            textObject.fontSize = 28;
             textObject.text = Translations.Get(cl.Definition.id+"A");
         }
         else if (card.transform.position.x < -1)
         {
-            textObject.fontSize = 32;
+            textObject.fontSize = 28;
             textObject.text = Translations.Get(cl.Definition.id+"B");
         }
         else

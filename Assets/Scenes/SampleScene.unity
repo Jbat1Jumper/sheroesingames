@@ -1248,8 +1248,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 523394574, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 523394574, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
       propertyPath: onScreen
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
+      propertyPath: Definition.id
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2583536415756231154, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
       propertyPath: Definition.LeftResult.MoodChange
@@ -1310,6 +1318,14 @@ PrefabInstance:
     - target: {fileID: 2583536415756231157, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
       propertyPath: m_Name
       value: BaseCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852105662568066951, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852105662568066951, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a2ee83d857ca2409617cfa8c1c1fd5, type: 3}
