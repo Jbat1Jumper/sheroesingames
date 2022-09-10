@@ -4,7 +4,8 @@ using UnityEngine;
 
 [System.Serializable]
 public class CardResult {
-    public int Stat1Change;
+    public int EnergyChange;
+    public int MoodChange;
 }
 
 public class Card : MonoBehaviour
