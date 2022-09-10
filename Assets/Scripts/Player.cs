@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        //PullNextCard();
+        PullNextCard();
     }
 
     public void SwipeLeft()
