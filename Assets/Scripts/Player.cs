@@ -81,6 +81,6 @@ public class Player : MonoBehaviour
     {
         Debug.Log("No more cards");
         Debug.Log("GAME OVER");
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("EndScene");
     }
 }
