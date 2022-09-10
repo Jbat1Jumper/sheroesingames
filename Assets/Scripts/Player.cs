@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public int Energy = 5;
     public int Mood = 5;
+    public int Power = 0;
 
     public Card CurrentCard;
     public Deck Deck;
@@ -36,13 +37,16 @@ public class Player : MonoBehaviour
         if (result.EnergyChange != 0) {
             Energy += result.EnergyChange;
             OnEnergyChanged.Invoke(Energy);
-            Debug.Log("Triggering Stat1 Change");
         }
 
         if (result.MoodChange != 0) {
             Mood += result.MoodChange;
             OnMoodChanged.Invoke(Mood);
-            Debug.Log("Triggering Stat1 Change");
+        }
+
+        if (result.PowerChange != 0) {
+            Power += result.PowerChange;
+            OnMoodChanged.Invoke(Power);
         }
 
         // Maybe yield until animation

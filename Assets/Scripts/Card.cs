@@ -6,6 +6,7 @@ using UnityEngine;
 public class CardResult {
     public int EnergyChange;
     public int MoodChange;
+    public int PowerChange;
 }
 
 public class Card : MonoBehaviour
