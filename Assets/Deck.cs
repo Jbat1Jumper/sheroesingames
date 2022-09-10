@@ -9,9 +9,16 @@ public class Deck : MonoBehaviour
     public CardDefinition GetNextCard()
     {
         if (Cards.Count > 0) {
+            Debug.Log("Poppin Card");
             return Cards.Pop();
         }
+        Debug.Log("No more cards");
         return null;
+    }
+
+    public void Start()
+    {
+        ShuffleDeck();
     }
 
     public void ShuffleDeck()

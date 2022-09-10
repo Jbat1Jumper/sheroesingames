@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
-        PullNextCard();
+        //PullNextCard();
     }
 
     public void SwipeLeft()
@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
 
     public void PullNextCard()
     {
+        if (CurrentCard != null) {
+            Destroy(CurrentCard.gameObject);
+        }
+
         var card = Deck.GetNextCard();
         if (card != null) {
             CreateCardFromDefinition(card);
@@ -53,8 +57,11 @@ public class Player : MonoBehaviour
 
     public void CreateCardFromDefinition(CardDefinition definition)
     {
-        var card = new GameObject();
+        var gameObject = Instantiate(Resources.Load("BaseCard")) as GameObject;
+        var card = gameObject.GetComponent<Card>();
+        card.Definition = definition;
 
+        CurrentCard = card;
     }
 
     public void NoMoreCards()
