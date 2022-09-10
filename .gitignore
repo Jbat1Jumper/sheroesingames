@@ -22,6 +22,7 @@
 # Visual Studio cache directory
 .vs/
 .idea/
+WomEmpowered/
 
 # Gradle cache directory
 .gradle/
