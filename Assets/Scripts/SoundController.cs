@@ -13,8 +13,26 @@ public class SoundController : MonoBehaviour
         PickUpSound.Play();
     }
 
-    public void PlayDrop()
+    public void PlayDropDown()
     {
         DropSound.Play();
+    }
+
+    public void PlaySwipeLeft()
+    {
+        DropSound.Play();
+    }
+
+    public void PlaySwipeRight()
+    {
+        DropSound.Play();
+    }
+
+    public void PlayPreviewLeft()
+    {
+    }
+
+    public void PlayPreviewRight()
+    {
     }
 }
