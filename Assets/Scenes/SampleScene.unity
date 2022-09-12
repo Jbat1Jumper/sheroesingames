@@ -790,7 +790,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991297403}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
@@ -1234,6 +1234,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1600999015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600999016}
+  - component: {fileID: 1600999017}
+  m_Layer: 0
+  m_Name: Card Swiper
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600999016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600999015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.39, z: 1.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600999017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600999015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e2bc81214b1bd4ca1d1d40d4fc3991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fMovingSpeed: 100
 --- !u!1 &1997139717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1426,10 @@ PrefabInstance:
       propertyPath: Definition.SpriteNormal
       value: 
       objectReference: {fileID: 21300000, guid: 958ac80e8dbaff94bb44ba46849ac1fb, type: 3}
+    - target: {fileID: 413252140153885847, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.723999
+      objectReference: {fileID: 0}
     - target: {fileID: 1249900021904030379, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1513,6 +1562,10 @@ PrefabInstance:
       propertyPath: Definition.RightResult.EnergyChange
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 3962202102630742115, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.056001186
+      objectReference: {fileID: 0}
     - target: {fileID: 3962202102630742116, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1520,6 +1573,10 @@ PrefabInstance:
     - target: {fileID: 3962202102630742117, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546810491916698762, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 4546810491916698763, guid: a848b2cf46ecf5941aaa4cdab012411e, type: 3}
       propertyPath: Definition.id
@@ -1662,6 +1719,10 @@ PrefabInstance:
       propertyPath: Deck
       value: 
       objectReference: {fileID: 1251221535}
+    - target: {fileID: 7236692809490222023, guid: e72fef26d8b88974faa035bc46286a5e, type: 3}
+      propertyPath: CardSwiper
+      value: 
+      objectReference: {fileID: 1600999017}
     - target: {fileID: 7236692809490222023, guid: e72fef26d8b88974faa035bc46286a5e, type: 3}
       propertyPath: CurrentCard
       value: 

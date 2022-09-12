@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     public Card CurrentCard;
     public Deck Deck;
+    public CardSwiper CardSwiper;
 
     public UnityEvent<int> OnEnergyChanged;
     public UnityEvent<int> OnEnergyChangePreview;
@@ -126,17 +127,11 @@ public class Player : MonoBehaviour
 
         var card = Deck.GetNextCard();
         if (card != null) {
-            PlaceCardInCenter(card);
+            CardSwiper.PutCardAndStartInteraction(card, this);
             CurrentCard = card;
         } else {
             NoMoreCards();
         }
-    }
-
-    private void PlaceCardInCenter(Card card)
-    {
-        card.transform.position = Vector3.zero;
-        card.GetComponent<GameLogic>().CurrentState = CardState.Entering;
     }
 
     private void NoMoreCards()

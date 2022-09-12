@@ -13,7 +13,7 @@ public static class Translations
         { "2B", "Salis con amigas"},
         { "3","El grupo de mensajes de la escuela no deja de sonar. De nuevo te piden que colabores con el acto escolar."},
         { "3A","Te negas"},
-        { "3B","Aceptas ayuda"},
+        { "3B","Aceptas ayudar"},
         { "4","Te asignan tu primer cliente: una empresa de ropa para maternar! Tu compañero cishetero te quiere explicar cómo tratar el tema para llegar a más madres."},
         { "4A","Te quedas callada"},
         { "4B","Haces escuchar tu voz"},

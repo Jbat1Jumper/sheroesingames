@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2583536415756231156}
   - component: {fileID: 2583536415756231154}
   - component: {fileID: 523394573}
-  - component: {fileID: 523394574}
   m_Layer: 0
   m_Name: BaseCard
   m_TagString: Untagged
@@ -138,21 +137,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.562817, y: 15.176254}
   m_EdgeRadius: 0
---- !u!114 &523394574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583536415756231157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e2bc81214b1bd4ca1d1d40d4fc3991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  card: {fileID: 2583536415756231157}
-  fMovingSpeed: 1
-  CurrentState: 0
 --- !u!1 &5865137989215229555
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.687, y: -2.9963}
+  m_AnchoredPosition: {x: -0.09, y: -2.9963}
   m_SizeDelta: {x: 67.434, y: 69.995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4731872100430345452
@@ -317,7 +301,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 32.03532, z: 57.37458, w: 32.368885}
+  m_margin: {x: 28.647501, y: 32.03532, z: 28.599047, w: 32.368885}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
