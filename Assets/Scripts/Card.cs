@@ -38,13 +38,13 @@ public class Card : MonoBehaviour
     {
         // TODO: Revisar esto, puede que lo haya puesto al revez 
         Text.fontSize = 12;
-        Text.text = Translations.Get(Definition.id+"B");
+        Text.text = Translations.Get(Definition.id+"A");
     }
 
     public void SetRightText()
     {
         Text.fontSize = 12;
-        Text.text = Translations.Get(Definition.id+"A");
+        Text.text = Translations.Get(Definition.id+"B");
     }
 
     public void SetNormalText()

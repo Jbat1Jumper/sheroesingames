@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class VisualStatIndicator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Sprite[] SpriteSheet;
 
-    // Update is called once per frame
-    void Update()
+    public void SetStatValue(int newValue)
     {
-        
+        var frame = (int)((((float)newValue) / Player.MAX_STAT_VALUE) * SpriteSheet.Length);
+        GetComponent<SpriteRenderer>().sprite = SpriteSheet[frame];
     }
 }

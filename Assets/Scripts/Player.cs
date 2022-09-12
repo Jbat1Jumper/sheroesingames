@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public const int MAX_STAT_VALUE = 10;
+
+
     public int Energy = 5;
     public int Mood = 5;
     public int Empowerment = 0;
@@ -29,6 +32,7 @@ public class Player : MonoBehaviour
     {
         Sounds = GameObject.FindGameObjectWithTag("Sounds").GetComponent<SoundController>();
         PullNextCard();
+        EmitCurrentStats();
     }
 
 
