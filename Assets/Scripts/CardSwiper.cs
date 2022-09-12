@@ -36,11 +36,11 @@ public class CardSwiper : MonoBehaviour
     private CardSide PreviousSide = CardSide.Center;
     private CardSide CurrentSide {
         get {
-            if (CurrentCard.transform.position.x > 1)
+            if (CurrentCard.transform.position.x > 0.6)
             {
                 return CardSide.Right;
             }
-            else if (CurrentCard.transform.position.x < -1)
+            else if (CurrentCard.transform.position.x < -0.6)
             {
                 return CardSide.Left;
             }
@@ -126,8 +126,13 @@ public class CardSwiper : MonoBehaviour
         switch (CurrentState)
         {
             case State.Lifted:
-                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                CurrentCard.transform.position = pos + MouseOffset;
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                var swiperPos = new Vector2(transform.position.x, transform.position.y);
+                var newPos = mousePos + MouseOffset - swiperPos;
+                newPos.x = Mathf.Sign(newPos.x) * (1 - Mathf.Exp(-Mathf.Abs(newPos.x * 1.0f))) * 1.0f;
+                newPos.x = Mathf.Clamp(newPos.x, -1, 1);
+                newPos.y = Mathf.Sign(newPos.y) * (1 - Mathf.Exp(-Mathf.Abs(newPos.y))) * 0.2f;
+                CurrentCard.transform.position = newPos + swiperPos;
                 break;
             case State.Idle:
                 CurrentCard.transform.position = transform.position;
