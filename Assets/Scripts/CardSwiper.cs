@@ -20,6 +20,7 @@ public class CardSwiper : MonoBehaviour
     Card CurrentCard;
     private Player Player;
     public float fMovingSpeed = 1f;
+    public Vector2 MouseOffset = Vector2.zero;
 
     State CurrentState = State.Empty;
 
@@ -113,6 +114,8 @@ public class CardSwiper : MonoBehaviour
             case State.Idle:
                 if (BeingDraggedWithTheMouse) {
                     CurrentState = State.Lifted;
+                    Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    MouseOffset = new Vector2(CurrentCard.transform.position.x, CurrentCard.transform.position.y) - mousePos;
                     Player.PickUp();
                 }
                 break;
@@ -124,7 +127,7 @@ public class CardSwiper : MonoBehaviour
         {
             case State.Lifted:
                 Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                CurrentCard.transform.position = pos;
+                CurrentCard.transform.position = pos + MouseOffset;
                 break;
             case State.Idle:
                 CurrentCard.transform.position = transform.position;
