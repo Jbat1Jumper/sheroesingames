@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public Card CurrentCard;
     public Deck Deck;
     public CardSwiper CardSwiper;
+    public OutcomeDialog OutcomeDialog;
 
     public UnityEvent<int> OnEnergyChanged;
     public UnityEvent<int> OnEnergyChangePreview;
@@ -107,24 +108,35 @@ public class Player : MonoBehaviour
         OnEmpowermentChanged.Invoke(Empowerment);
     }
 
-    private void ApplyResult(Outcome result)
+    private void ApplyResult(Outcome outcome)
     {
-        Energy += result.EnergyChange;
-        Mood += result.MoodChange;
-        Empowerment += result.EmpowermentChange;
+        Energy += outcome.EnergyChange;
+        Mood += outcome.MoodChange;
+        Empowerment += outcome.EmpowermentChange;
 
         EmitCurrentStats();
 
+        DestroyCurrentCard();
+
+        OutcomeDialog.Show(outcome);
+    }
+
+    public void OutcomeAcknowledged(Outcome outcome)
+    {
         // Maybe yield until animation
         PullNextCard();
     }
 
-    private void PullNextCard()
+    private void DestroyCurrentCard()
     {
         if (CurrentCard != null) {
             Destroy(CurrentCard.gameObject);
         }
+    }
 
+    private void PullNextCard()
+    {
+        DestroyCurrentCard();
         var situation = Deck.GetNextSituation();
 
         if (situation != null) {

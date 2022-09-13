@@ -52,7 +52,7 @@ public class Deck : MonoBehaviour
         };
     }
 
-    private static Regex OutcomeDescriptionRegex = new Regex(@"\[(?<text_between_brackets>.*)\](?<the_rest>)");
+    private static Regex OutcomeDescriptionRegex = new Regex(@"\[(?<text_between_brackets>.*)\](?<the_rest>.*)");
 
     private Outcome LoadOutcome(string outcomeId, Dictionary<string, string> row)
     {
