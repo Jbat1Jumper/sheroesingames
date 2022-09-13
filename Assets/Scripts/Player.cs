@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Move Back To Center");
         EmitCurrentStats();
-        CurrentCard.SetNormalText();
+        CurrentCard.SetCenterText();
     }
 
     public void SwipeLeft()
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
 
 
 
-    private void PreviewResult(CardResult result)
+    private void PreviewResult(Outcome result)
     {
         OnEnergyChangePreview.Invoke(result.EnergyChange);
         OnMoodChangePreview.Invoke(result.MoodChange);
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
         OnEmpowermentChanged.Invoke(Empowerment);
     }
 
-    private void ApplyResult(CardResult result)
+    private void ApplyResult(Outcome result)
     {
         Energy += result.EnergyChange;
         Mood += result.MoodChange;
@@ -125,8 +125,12 @@ public class Player : MonoBehaviour
             Destroy(CurrentCard.gameObject);
         }
 
-        var card = Deck.GetNextCard();
-        if (card != null) {
+        var situation = Deck.GetNextSituation();
+
+        if (situation != null) {
+
+            var card = (Instantiate(Resources.Load("BaseCard")) as GameObject).GetComponent<Card>();
+            card.Definition = situation;
             CardSwiper.PutCardAndStartInteraction(card, this);
             CurrentCard = card;
         } else {

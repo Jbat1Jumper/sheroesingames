@@ -1,26 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
-[System.Serializable]
-public class CardResult {
-    public int EnergyChange;
-    public int MoodChange;
-    public int EmpowermentChange;
-}
-
 public class Card : MonoBehaviour
 {
-    public CardDefinition Definition;
+    public Situation Definition;
     TextMeshPro Text;
 
     public void Start()
     {
         Text = GetComponentInChildren<TextMeshPro>();
-        GetComponent<SpriteRenderer>().sprite = Definition.SpriteNormal;
-        SetNormalText();
+        GetComponent<SpriteRenderer>().sprite = Definition.CardSprite;
+        SetCenterText();
     }
     public bool IsMouseOver = false;
     
@@ -36,32 +30,44 @@ public class Card : MonoBehaviour
 
     public void SetLeftText()
     {
-        // TODO: Revisar esto, puede que lo haya puesto al revez 
         Text.fontSize = 12;
-        Text.text = Translations.Get(Definition.id+"A");
+        Text.text = Definition.LeftResult.ActionText;
     }
 
     public void SetRightText()
     {
         Text.fontSize = 12;
-        Text.text = Translations.Get(Definition.id+"B");
+        Text.text = Definition.RightResult.ActionText;
     }
 
-    public void SetNormalText()
+    public void SetCenterText()
     {
         Text.fontSize = 8;
-        Text.text = Translations.Get(Definition.id);
+        Text.text = Definition.SituationText;
     }
 }
 
 [System.Serializable]
-public class CardDefinition
+public class Situation
 {
-    public Sprite SpriteNormal;
+    public string Id;
 
-    public string id;
-
-    public CardResult LeftResult;
-
-    public CardResult RightResult;
+    public Outcome LeftResult;
+    public Outcome RightResult;
+    public Sprite CardSprite;
+    public string SituationText;
 }
+
+
+
+[System.Serializable]
+public class Outcome {
+    public string Id;
+    public int EnergyChange;
+    public int MoodChange;
+    public int EmpowermentChange;
+
+    public string ActionText;
+    public string OutcomeDescription;
+}
+
