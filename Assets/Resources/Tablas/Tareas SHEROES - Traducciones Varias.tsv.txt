@@ -1,3 +1,4 @@
-key	spanish	english	deutsch
-play	Jugar	Play	Spiele
-credits	Creditos	Credits	Credits
+key	spanish	english	deutsch	X
+play	Jugar	Play	Spiele	
+credits	Creditos	Credits	Credits	
+current_language	Español	English	Deutsch	

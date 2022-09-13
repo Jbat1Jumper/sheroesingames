@@ -39,11 +39,9 @@ public class Table {
         // find the max number of columns
         for (int i = 1; i < lines.Length; i++)
         {
-            Debug.Log($"{i}");
             var parsedRow = new Dictionary<string, string>();
             string[] row = lines[i].Split('\t');
             for (int j = 0; j < row.Length; j++) {
-                Debug.Log($"{i} {j}");
                 parsedRow.Add(columns[j], row[j]);
             }
 

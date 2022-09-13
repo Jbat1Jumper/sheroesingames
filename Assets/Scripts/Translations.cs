@@ -44,6 +44,14 @@ public static class Translations
         }
     }
 
+    public static string For(string key) {
+        if (Texts == null) {
+            ChangeLanguage(CurrentLanguage);
+        }
+
+        return Texts[key];
+    }
+
     private static string LanguageColumn(Language language) {
         switch (language)
         {
@@ -53,7 +61,24 @@ public static class Translations
                 return "deutsch";
             case Language.English:
                 return "english";
+            default:
+                return "";
         }
-        return "";
+    }
+
+    public static Language NextLanguage {
+        get {
+            switch (CurrentLanguage)
+            {
+                case Language.Spanish:
+                    return Language.Deutsch;
+                case Language.Deutsch:
+                    return Language.English;
+                case Language.English:
+                    return Language.Spanish;
+                default:
+                    return Language.Spanish;
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@ public class Deck : MonoBehaviour
         var situations = new List<Situation>();
 
         foreach (var row in Translations.GameData.Rows) {
-            if (string.IsNullOrWhiteSpace(row["ID Situación"]) || row["Habilitada"].ToLower() != "si")
+            if (string.IsNullOrWhiteSpace(row["Sprite de Carta"]) || string.IsNullOrWhiteSpace(row["ID Situación"]) || row["Habilitada"].ToLower() != "si")
                 continue;
 
             situations.Add(LoadSituation(row));
@@ -44,7 +44,7 @@ public class Deck : MonoBehaviour
     private Situation LoadSituation(Dictionary<string, string> row) {
         return new Situation() {
             Id = row["ID Situación"],
-            CardSprite = Resources.Load<Sprite>($"Cartas/Carta {row["ID Situación"]}"),
+            CardSprite = Resources.Load<Sprite>(row["Sprite de Carta"]),
 
             LeftResult = LoadOutcome("A", row),
             RightResult = LoadOutcome("B", row),
