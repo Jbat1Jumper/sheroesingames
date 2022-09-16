@@ -52,6 +52,12 @@ public static class Translations
         return Texts[key];
     }
 
+    public static string CurrentLanguageString {
+        get {
+            return LanguageColumn(CurrentLanguage);
+        }
+    }
+
     private static string LanguageColumn(Language language) {
         switch (language)
         {

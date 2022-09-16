@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541252387}
   - component: {fileID: 1541252388}
+  - component: {fileID: 1541252389}
   m_Layer: 5
   m_Name: Square
   m_TagString: Untagged
@@ -285,17 +286,29 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b89f1b64e711bd247812b2406eadbca5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18cc2b3f113c4b14ba324c0867d393fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 14.14, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1541252389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541252386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabe7a1178991da4c9314d34aa5e53f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1843589172
 GameObject:
   m_ObjectHideFlags: 0
