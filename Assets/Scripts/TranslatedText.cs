@@ -6,13 +6,17 @@ using UnityEngine;
 public class TranslatedText : MonoBehaviour
 {
     string Key;
-    TextMeshProUGUI TMP;
+    TMP_Text TMP;
     Language CurrentLanguage;
 
     // Start is called before the first frame update
     void Start()
     {
         TMP = GetComponent<TextMeshProUGUI>();
+        if (!TMP) {
+            TMP = GetComponent<TextMeshPro>();
+        }
+
         Key = TMP.text;
         CurrentLanguage = Translations.CurrentLanguage;
         TMP.text = Translations.For(Key);

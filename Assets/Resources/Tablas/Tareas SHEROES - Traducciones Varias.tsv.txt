@@ -2,3 +2,11 @@ key	spanish	english	deutsch	X
 play	Jugar	Play	Spiele	
 credits	Creditos	Credits	Credits	
 current_language	Español	English	Deutsch	
+good_ending_msg_2	Me ascendieron! Finalmente pude romper el techo de cristal. Hacer escuchar mi voz valió la pena!	I was promoted! Finally, I was able to break the glass ceiling. Make myself heard was worth it!	I was promoted! Finally, I was able to break the glass ceiling. Make myself heard was worth it!	
+good_ending_msg_3	Felicitaciones amiga! Sabíamos que ibas a poder lograrlo!	Congrats Won! We knew you could do it!	Congrats Won! We knew you could do it!	
+good_ending_msg_4	Hay que salir a festejar	We should go out for drinks.	We should go out for drinks.	
+good_ending_msg_5	Brindemos! Por más mujeres haciéndose valer	 Let's toast! For more women making themselves heard!	 Let's toast! For more women making themselves heard!	
+bad_ending_msg_2	No me ascendieron. Debería haberme hecho escuchar	I didn't get promoted. I should have made myself heard.	I didn't get promoted. I should have made myself heard.	
+bad_ending_msg_3	La próxima vas a conseguir!!	You will next time!	You will next time!	
+bad_ending_msg_4	Es dificil despegarse del suelo pegajoso	 It's hard to get off the sticky floor	 It's hard to get off the sticky floor	
+bad_ending_msg_5	 Mientras nos tenes a nosotras	In the meantime, we got your back	In the meantime, we got your back	
