@@ -402,6 +402,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1869472528910935339, guid: 8cd64a469d97f0f4cb2734e55e13396d, type: 3}
+      propertyPath: m_Volume
+      value: 0.613
+      objectReference: {fileID: 0}
     - target: {fileID: 1869472529778756106, guid: 8cd64a469d97f0f4cb2734e55e13396d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -449,6 +453,10 @@ PrefabInstance:
     - target: {fileID: 1869472529778756109, guid: 8cd64a469d97f0f4cb2734e55e13396d, type: 3}
       propertyPath: m_Name
       value: Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117201698371122605, guid: 8cd64a469d97f0f4cb2734e55e13396d, type: 3}
+      propertyPath: m_Volume
+      value: 0.418
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd64a469d97f0f4cb2734e55e13396d, type: 3}

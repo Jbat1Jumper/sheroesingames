@@ -6,6 +6,7 @@ public class SoundController : MonoBehaviour
 {
     public AudioSource PickUpSound;
     public AudioSource DropSound;
+    public AudioSource SwipeSound;
     public AudioSource Bg;
     public AudioSource BgAmbience;
 
@@ -61,12 +62,14 @@ public class SoundController : MonoBehaviour
 
     public void PlaySwipeLeft()
     {
-        DropSound.Play();
+        SwipeSound.panStereo = -0.7f;
+        SwipeSound.Play();
     }
 
     public void PlaySwipeRight()
     {
-        DropSound.Play();
+        SwipeSound.panStereo = 0.7f;
+        SwipeSound.Play();
     }
 
     public void PlayPreviewLeft()
