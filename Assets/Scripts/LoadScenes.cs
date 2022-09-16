@@ -14,6 +14,16 @@ public class LoadScenes : MonoBehaviour
 
     public void LoadScene()
     {
+        try
+        {
+            var sc = GameObject.FindGameObjectWithTag("Sounds").GetComponent<SoundController>();
+            sc.EnteredMainScene();
+        } catch(System.Exception e)
+        {
+            Debug.Log(e);
+            Debug.Log("No sound controller, all ok tho");
+        }
+
         SceneManager.LoadScene("LoadScreen");
     }
 

@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("No more cards");
         Debug.Log("GAME OVER");
+        Sounds.LeftMainScene();
         SceneManager.LoadScene("EndScene");
     }
 }
